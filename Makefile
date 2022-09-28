@@ -7,4 +7,8 @@ sqlc:
 	sqlc generate
 test: 
 	go test -v -cover ./...
-.PHONY: migrateup migratedown sqlc
+
+server:
+	go run main.go 	
+	
+.PHONY: migrateup migratedown sqlc server
